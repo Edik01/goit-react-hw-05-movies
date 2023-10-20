@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 
 export const SearchForm = () => {
   const [value, setValue] = useState('');
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [, setSearchParams] = useSearchParams();
   const handleChange = event => {
     setValue(event.target.value);
   };

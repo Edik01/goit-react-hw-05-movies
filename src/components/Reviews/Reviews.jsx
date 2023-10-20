@@ -18,14 +18,12 @@ const Reviews = () => {
       {reviews && (
         <ul>
           {reviews.map(({ author, id, content }) => {
-            {
-              return (
-                <li key={id}>
-                  <h3>{author}</h3>
-                  <p>{content}</p>
-                </li>
-              );
-            }
+            return (
+              <li key={id}>
+                <h3>{author}</h3>
+                <p>{content}</p>
+              </li>
+            );
           })}
         </ul>
       )}

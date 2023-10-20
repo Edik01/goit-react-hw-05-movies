@@ -18,18 +18,16 @@ const Cast = () => {
       {casts && (
         <ul>
           {casts.map(({ name, profile_path, id }) => {
-            {
-              return (
-                <li key={id}>
-                  <img
-                    src={`https://image.tmdb.org/t/p/w500${profile_path}`}
-                    alt={name}
-                    width="80"
-                  />
-                  <h3>{name}</h3>
-                </li>
-              );
-            }
+            return (
+              <li key={id}>
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${profile_path}`}
+                  alt={name}
+                  width="80"
+                />
+                <h3>{name}</h3>
+              </li>
+            );
           })}
         </ul>
       )}

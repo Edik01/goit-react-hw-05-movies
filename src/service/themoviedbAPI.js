@@ -16,3 +16,23 @@ export const fetchMovieByName = async name => {
   );
   return results;
 };
+
+export const fetchMovieById = async id => {
+  const { data } = await axios(
+    `/movie/${id}?language=en-US&api_key=${API_KEY}`
+  );
+  return data;
+};
+export const fetchCastsByIdMovie = async id => {
+  const {
+    data: { cast },
+  } = await axios(`/movie/${id}/credits?language=en-US&api_key=${API_KEY}`);
+  return cast;
+};
+
+export const fetchReviewsByIdMovie = async id => {
+  const {
+    data: { results },
+  } = await axios(`/movie/${id}/reviews?language=en-US&api_key=${API_KEY}`);
+  return results;
+};
